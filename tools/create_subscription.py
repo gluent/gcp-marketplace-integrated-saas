@@ -42,8 +42,8 @@ def main(argv):
                                                      SUBSCRIPTION_NAME)
 
     try:
-        subscription = subscriber.create_subscription(subscription_path,
-                                                      topic_path)
+        subscription = subscriber.create_subscription(name=subscription_path,
+                                                      topic=topic_path)
     except PermissionDenied:
         error_message = ('PERMISSION DENIED: Check that the Pub/Sub API is '
                          'enabled in your project and that your service '
